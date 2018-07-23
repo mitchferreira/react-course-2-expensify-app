@@ -1,4 +1,3 @@
-import { isMoment } from "../../node_modules/moment";
 import moment from "moment";
 
 // Get visible expenses

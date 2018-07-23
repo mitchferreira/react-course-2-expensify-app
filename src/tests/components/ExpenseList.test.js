@@ -12,8 +12,3 @@ test("should render ExpenseList with empty message", () => {
   const wrapper = shallow(<ExpenseList expenses={[]} />);
   expect(wrapper).toMatchSnapshot();
 });
-
-// create test file
-// grab imports
-// render expenseListItem with fixture data
-// create snapshot
