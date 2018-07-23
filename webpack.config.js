@@ -9,7 +9,7 @@ module.exports = env => {
     entry: "./src/app.js", // where the application code lives
     output: {
       // requires absolute path, I'm guessing it's because webpack doesn't run from this folder
-      path: path.join(__dirname, "public"),
+      path: path.join(__dirname, "public", "dist"),
       filename: "bundle.js"
     },
     module: {
@@ -44,7 +44,8 @@ module.exports = env => {
     devtool: isProduction ? "source-map" : "inline-source-map",
     devServer: {
       contentBase: path.join(__dirname, "public"),
-      historyApiFallback: true
+      historyApiFallback: true,
+      publicPath: "/dist/"
     }
   };
 };
